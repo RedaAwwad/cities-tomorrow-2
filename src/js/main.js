@@ -88,6 +88,38 @@ $(function () {
 
     makeNavbarFixed();
 
+    if($('.hero-slider').length) {
+        const heroSlider = new Swiper(".hero-slider", {
+            modules: [Navigation],
+            slidesPerView: 1,
+            spaceBetween: 15,
+            navigation: {
+                nextEl: ".slider-next-btn",
+                prevEl: ".slider-prev-btn",
+            },
+            on: {
+                init: function (paload) {
+                  $('.swiper.hero-slider .swiper-slide').each((index, el) => {
+                      $('#heroSliderPagination').append(`
+                        <span class="slide-item ${index == 0 ? 'active' : ''}">
+                            <small dir="ltr">1 / ${index + 1}</small>
+                        </span>
+                      `);
+                  })
+                },
+            },
+        });
+
+        heroSlider.on('activeIndexChange', function (payload) {
+            $('.slide-item').removeClass('active');
+            $('.slide-item').each((index, el) => {
+                if(index == payload.realIndex) {
+                    $(el).addClass('active');
+                }
+            });
+        });
+    }
+
     if($('.about-slider').length) {
         new Swiper(".about-slider", {
             modules: [Pagination],
@@ -130,62 +162,48 @@ $(function () {
     }
 
     if($('.services-slider').length) {
-        new Swiper(".services-slider", {
-            modules: [Navigation, Pagination],
-            slidesPerView: 1,
-            spaceBetween: 15,
-            // centeredSlides: true,
-            // loop: true,
-            pagination: {
-                el: ".services-slider__pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".services-slider__next",
-                prevEl: ".services-slider__prev",
-            },
-            breakpoints: {
-                '@0.75': {
-                  slidesPerView: 2,
-                  centeredSlides: false,
+        $('.services-slider').slick({
+            rtl: true,
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 1600,
+                    settings: {
+                        centerMode: true,
+                    }
                 },
-                '@1.00': {
-                  slidesPerView: 3,
-                },
-                '@1.50': {
-                  slidesPerView: 4,
-                },
-            }
-        });
-    }
-
-    if($('.tarnsport-slider').length) {
-        new Swiper(".tarnsport-slider", {
-            modules: [Navigation, Pagination],
-            slidesPerView: 1,
-            spaceBetween: 15,
-            // centeredSlides: true,
-            // loop: true,
-            pagination: {
-                el: ".services-slider__pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".services-slider__next",
-                prevEl: ".services-slider__prev",
-            },
-            breakpoints: {
-                '@0.75': {
-                  slidesPerView: 1,
-                  centeredSlides: false,
-                },
-                '@1.00': {
-                  slidesPerView: 2,
-                },
-                // '@1.50': {
-                //   slidesPerView: 4,
-                // },
-            }
+              {
+                breakpoint: 1199,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 3,
+                  centerMode: true,
+                }
+              },
+              {
+                breakpoint: 600,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 2,
+                  centerMode: true,
+                }
+              },
+              {
+                breakpoint: 480,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  centerMode: true,
+                }
+              }
+              // You can unslick at a given breakpoint now by adding:
+              // settings: "unslick"
+              // instead of a settings object
+            ]
         });
     }
 
@@ -213,103 +231,6 @@ $(function () {
                   },
                 '@1.50': {
                   slidesPerView: 6,
-                },
-            }
-        });
-    }
-
-    if($('.projects-grid-slider').length) {
-        const slider = new Swiper(".projects-grid-slider", {
-            modules: [Pagination],
-            slidesPerView: 2,
-            // centeredSlides: true,
-            spaceBetween: 10,
-            // loop: true,
-            pagination: {
-                el: ".projects-slider__pagination",
-                clickable: true,
-            },
-            breakpoints: {
-                '@0.75': {
-                  slidesPerView: 3,
-                  spaceBetween: 0,
-                },
-                '@1.00': {
-                  slidesPerView: 4,
-                },
-                '@1.25': {
-                    slidesPerView: 5,
-                  },
-                '@1.50': {
-                  slidesPerView: 6,
-                },
-            },
-        });
-
-    }
-
-    if($('.raqamaya-services-slider').length) {
-        
-        // $('.raqamaya-services-slider').slick({
-        //     dots: true,
-        //     infinite: true,
-        //     speed: 300,
-        //     slidesToShow: 2,
-        //     centerMode: true,
-        //     variableWidth: true,
-        //     rtl: document.dir == 'rtl',
-        //     responsive: [
-        //         {
-        //           breakpoint: 1024,
-        //           settings: {
-        //             slidesToShow: 4,
-        //             slidesToScroll: 1,
-        //             infinite: true,
-        //             dots: true
-        //           }
-        //         },
-        //         {
-        //           breakpoint: 600,
-        //           settings: {
-        //             slidesToShow: 3,
-        //             slidesToScroll: 1
-        //           }
-        //         },
-        //         {
-        //           breakpoint: 480,
-        //           settings: {
-        //             slidesToShow: 1,
-        //             slidesToScroll: 1
-        //           }
-        //         }
-        //         // You can unslick at a given breakpoint now by adding:
-        //         // settings: "unslick"
-        //         // instead of a settings object
-        //       ]
-        // });
-        new Swiper(".raqamaya-services-slider", {
-            modules: [Pagination],
-            slidesPerView: 2,
-            // centeredSlides: true,
-            spaceBetween: 10,
-            // loop: true,
-            pagination: {
-                el: ".raqamaya-services-slider .services-slider__pagination",
-                clickable: true,
-            },
-            breakpoints: {
-                '@0.75': {
-                  slidesPerView: 2,
-                  spaceBetween: 0,
-                },
-                '@1.00': {
-                  slidesPerView: 3,
-                },
-                '@1.25': {
-                    slidesPerView: 3,
-                  },
-                '@1.50': {
-                  slidesPerView: 4,
                 },
             }
         });

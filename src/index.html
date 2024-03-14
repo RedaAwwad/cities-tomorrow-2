@@ -1,44 +1,79 @@
 {{> _head page='qwa' }}
 
 <link rel="stylesheet" href="vendor/jquery.vidbacking.min.css">
-<!-- <link rel="stylesheet" href="vendor/slick/slick.min.css"> -->
+<link rel="stylesheet" href="vendor/slick/slick.min.css">
+<link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css">
 
 </head>
 
 <body class="cities-page">
   {{> _loader }}
 
-  <header id="video-background" class="zimam-page__header d-flex align-items-center">
-    <div class="container">
-      <div class="zimam-page__content">
-        <video autoplay muted loop playsinline style="pointer-events: none;" class="vidbacking" preload="none">
-          <source src="video/zimam.mp4" type="video/mp4">
-        </video>
-        {{> _inner_navbar logo_lg='imgs/zimam-qwa.png' logo_sm='imgs/zimam-qwa-sm.png' page='qwa' }}
-        
-        
-        <div class="page-hero">
-          <h1 class="reveal">
-            هنا سلايدر 1
-          </h1>
-          <p class="page-subhero reveal">
-            هنا نص تحت السلايدر الأول يمكن الاستفادة منه
-          </p>
-          <!-- <div class="reveal">
-            <a href="#" class="btn cities-btn cities-btn--lg d-flex align-items-center">
-              <span class="text px-2">تواصل معنا</span>
-              <span class="px-2">
-                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect class="icon-bg" width="28" height="28" rx="14" fill="white"/>
-                  <path d="M13.3333 9.41659L8.75 13.9999L13.3333 18.5833" stroke="currentColor" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path opacity="0.6" d="M18.3333 9.41659L13.75 13.9999L18.3333 18.5833" stroke="currentColor" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-              </span>
-            </a>
-          </div> -->
+  <header class="cities__header position-relative overflow-hidden">
+    {{> _inner_navbar }}
+    <!-- ----------------------------- -->
+    <div dir="rtl" class="swiper hero-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="slide-container video-background">
+            <video autoplay muted loop playsinline style="pointer-events: none;" class="vidbacking" preload="none">
+              <source src="video/v1.mp4" type="video/mp4">
+            </video>
+            <div class="page-hero reveal">
+              <h2 class="slide__main-title">
+                هنا سلايدر 1
+              </h2>
+              <p class="slide__main-subtitle">
+                هنا نص تحت السلايدر الأول يمكن الاستفادة منه
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="slide-container video-background">
+            <video autoplay muted loop playsinline style="pointer-events: none;" class="vidbacking" preload="none">
+              <source src="video/v2.mp4" type="video/mp4">
+            </video>
+            <div class="page-hero reveal">
+              <h2 class="slide__main-title">
+                هنا سلايدر 2
+              </h2>
+              <p class="slide__main-subtitle">
+                هنا نص تحت السلايدر الثاني يمكن الاستفادة منه
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="slide-container video-background">
+            <video autoplay muted loop playsinline style="pointer-events: none;" class="vidbacking" preload="none">
+              <source src="video/v3.mp4" type="video/mp4">
+            </video>
+            <div class="page-hero reveal">
+              <h2 class="slide__main-title">
+                هنا سلايدر 3
+              </h2>
+              <p class="slide__main-subtitle">
+                هنا نص تحت السلايدر الثالث يمكن الاستفادة منه
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+  
+    <div class="hero-slider__controls">
+      <button class="slider-next-btn btn p-1">
+        <svg width="2rem" height="2rem" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M39 18.2716H4.70305L12.4335 10.5411L10.6962 8.80383L0 19.5L10.6962 30.1962L12.4335 28.4589L4.70305 20.7285H39V18.2716Z" fill="currentColor"/>
+        </svg>
+      </button>
+      <button class="slider-prev-btn btn p-1">
+        <svg width="2rem" height="2rem" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg"><g><path d="M0 18.2716H34.297L26.5665 10.5411L28.3038 8.80383L39 19.5L28.3038 30.1962L26.5665 28.4589L34.297 20.7285H0V18.2716Z" fill="currentColor"/></g></svg>
+      </button>
+    </div>
+    <div id="heroSliderPagination" class="hero-slider__pagination"></div>
+    <!-- ----------------------------- -->
   </header>
   <main class="overflow-hidden">
     <!-- about -->
@@ -46,7 +81,7 @@
       <div class="container-xl">
         <div class="d-none d-md-block">
           <div class="row about-cards">
-            <div class="col-md-6 d-flex p-0">
+            <div class="col-md-6 d-flex p-0 reveal">
               <div class="card feature-card">
                 <!-- <img class="feature-card__bg" src="imgs/card-bg-1.png" alt=""> -->
                 <div class="feature-card__body">
@@ -68,7 +103,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6 d-flex p-0">
+            <div class="col-md-6 d-flex p-0 reveal">
               <div class="card feature-card">
                 <!-- <img class="feature-card__bg" src="imgs/card-bg-2.png" alt=""> -->
                 <div class="feature-card__body">
@@ -86,7 +121,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6 d-flex p-0">
+            <div class="col-md-6 d-flex p-0 reveal">
               <div class="card feature-card">
                 <!-- <img class="feature-card__bg" src="imgs/card-bg-1.png" alt=""> -->
                 <div class="feature-card__body">
@@ -103,7 +138,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6 d-flex p-0">
+            <div class="col-md-6 d-flex p-0 reveal">
               <div class="card feature-card">
                 <!-- <img class="feature-card__bg" src="imgs/card-bg-1.png" alt=""> -->
                 <div class="feature-card__body">
@@ -128,7 +163,6 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="card feature-card">
-                <!-- <img class="feature-card__bg" src="imgs/card-bg-1.png" alt=""> -->
                 <div class="feature-card__body">
                   <div class="feature-card__icon reveal">
                     <svg width="4rem" height="4rem" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -150,7 +184,6 @@
             </div>
             <div class="swiper-slide">
               <div class="card feature-card">
-                <!-- <img class="feature-card__bg" src="imgs/card-bg-2.png" alt=""> -->
                 <div class="feature-card__body">
                   <div class="feature-card__icon reveal">
                     <svg width="4rem" height="4rem" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -168,7 +201,6 @@
             </div>
             <div class="swiper-slide">
               <div class="card feature-card">
-                <!-- <img class="feature-card__bg" src="imgs/card-bg-1.png" alt=""> -->
                 <div class="feature-card__body">
                   <div class="feature-card__icon reveal">
                     <svg width="4rem" height="4rem" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -185,7 +217,6 @@
             </div>
             <div class="swiper-slide">
               <div class="card feature-card">
-                <!-- <img class="feature-card__bg" src="imgs/card-bg-1.png" alt=""> -->
                 <div class="feature-card__body">
                   <div class="feature-card__icon reveal">
                     <svg width="4rem" height="4rem" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -216,9 +247,11 @@
             حلول متكاملة للبنية التحتية والتكنولوجيا لتحسين الحياة الحضرية
           </p>
         </div>
-        <div dir="rtl" class="swiper services-slider reveal">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
+      </div>
+      <div class="mx-auto" style="max-width: 1600px;">
+        <div dir="rtl" class="reveal">
+          <div class="services-slider">
+            <div>
               <a href="service.html" class="service-card">
                 <img class="service-card__img-bg" src="imgs/service/service-1.png" loading="lazy" alt="">
                 <div class="service-card__content">
@@ -239,7 +272,7 @@
                 </div>
               </a>
             </div>
-            <div class="swiper-slide">
+            <div>
               <a href="service.html" class="service-card">
                 <img class="service-card__img-bg" src="imgs/service/service-2.png" loading="lazy" alt="">
                 <div class="service-card__content">
@@ -260,7 +293,7 @@
                 </div>
               </a>
             </div>
-            <div class="swiper-slide">
+            <div>
               <a href="service.html" class="service-card">
                 <img class="service-card__img-bg" src="imgs/service/service-3.png" loading="lazy" alt="">
                 <div class="service-card__content">
@@ -281,7 +314,7 @@
                 </div>
               </a>
             </div>
-            <div class="swiper-slide">
+            <div>
               <a href="service.html" class="service-card">
                 <img class="service-card__img-bg" src="imgs/service/service-1.png" loading="lazy" alt="">
                 <div class="service-card__content">
@@ -303,7 +336,7 @@
                 </div>
               </a>
             </div>
-            <div class="swiper-slide">
+            <div>
               <a href="service.html" class="service-card">
                 <img class="service-card__img-bg" src="imgs/service/service-2.png" loading="lazy" alt="">
                 <div class="service-card__content">
@@ -504,10 +537,11 @@
   
   {{> _footer }}
   {{> _tail }}
+  <script type="text/javascript" src="vendor/slick/slick.min.js"></script>
   <script src="vendor/jquery.vidbacking.min.js"></script>
   <script>
     $(function () {
-      $('#video-background').vidbacking();
+      $('.video-background').vidbacking();
 
     });
   </script>

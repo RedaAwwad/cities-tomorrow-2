@@ -57,6 +57,11 @@ body {
       max-width: 1400px;
     }
   }
+
+  .slick-slide {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -144,7 +149,7 @@ body {
 
   @media screen and (max-width: 580px) {
     .logo {
-      width: 225px !important;
+      width: 200px !important;
     }
   }
 }
@@ -1227,6 +1232,10 @@ body {
   &__title {
     margin-bottom: 1rem;
     font-size: 1.56rem;
+
+    @media (max-width: 480px) {
+      font-size: 1.1rem;
+    }
   }
 
   &__text {
@@ -1242,6 +1251,19 @@ body {
       &__footer {
         opacity: 1;
         visibility: visible;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .cities-btn {
+      span {
+        font-weight: 300;
+        font-size: 0.75rem;
+      }
+
+      span:not(.text) {
+        display: none;
       }
     }
   }
@@ -1320,15 +1342,17 @@ body {
     cursor: pointer;
   }
 
-  .swiper-slide-active {
-    .service-card {
-      &__content {
-        bottom: 0 !important;
-      }
-
-      &__footer {
-        opacity: 1;
-        visibility: visible;
+  .slick-current {
+    @media (max-width: 480px) {
+      .service-card {
+        &__content {
+          bottom: 0 !important;
+        }
+  
+        &__footer {
+          opacity: 1;
+          visibility: visible;
+        }
       }
     }
   }
@@ -2728,6 +2752,199 @@ body {
       background-size: cover;
       background-position: bottom;
       border-radius: 15px;
+    }
+  }
+}
+
+
+.services-slider {
+  
+  .slick-dots {
+    bottom: -40px;
+
+    li {
+      width: 75px;
+      height: 6px;
+      margin: 0;
+      background-color: rgba(106, 116, 120, 0.1);
+
+      &:first-child {
+        border-radius: 0 5px 5px 0;
+      }
+
+      &:last-child {
+        border-radius: 5px 0 0 5px;
+      }
+
+      @media (max-width: 480px) {
+        width: 50px;
+      }
+      
+      button {
+        width: 100%;
+        height: 100%;
+
+        &::before {
+          content: '';
+          width: 100%;
+          height: 100%;
+          border-radius: 5px;
+        }
+      }
+
+      &.slick-active {
+        button::before {
+          background-color: var(--mainColor);
+        }
+      }
+    }
+  }
+}
+
+.cities__header {
+  background-color: #000;
+}
+
+// hero slider
+.hero-slider {
+  position: relative;
+
+  .slide-container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  .page-hero {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .slide__main-title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    visibility: hidden;
+
+    @media (max-width: 480px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  .slide__main-subtitle {
+    font-size: 1.8rem;
+    font-weight: 300;
+    opacity: 0;
+    visibility: hidden;
+
+    @media (max-width: 480px) {
+      font-size: 1.2rem;
+    }
+  }
+
+  .swiper-slide-active {
+    .slide__main-title,
+    .slide__main-subtitle {
+      animation: slide-up 0.9s cubic-bezier(0.65, 0, 0.35, 1) both;
+    }
+
+    .slide__main-subtitle {
+      animation-delay: 200ms;
+    }
+  }
+
+  &__controls {
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    transform: translateY(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .btn {
+      border: none;
+      color: #fff !important;
+    }
+
+    @media (max-width: 1400px) {
+      left: 25px;
+    }
+
+    @media (max-width: 991px) {
+      top: auto !important;
+      bottom: 50px !important;
+      transform: none;
+    }
+  }
+
+  &__pagination {
+    position: absolute;
+    top: 50% !important;
+    bottom: auto !important;
+    right: 100px;
+    transform: translateY(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    @media (max-width: 1400px) {
+      right: 25px;
+    }
+
+    @media (max-width: 991px) {
+      top: auto !important;
+      bottom: 75px !important;
+      transform: none;
+    }
+
+    .slide-item {
+      position: relative;
+      display: inline-block;
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+      transition: all 300ms ease-in-out;
+
+      small {
+        position: absolute;
+        top: 50%;
+        left: -35px;
+        transform: translateY(-50%);
+        color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 300ms ease-in-out;
+      }
+
+      &.active {
+        width: 60px;
+        background-color: var(--mainColor);
+
+        small {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
     }
   }
 }
