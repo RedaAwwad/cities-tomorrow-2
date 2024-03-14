@@ -2891,7 +2891,7 @@ body {
 
     @media (max-width: 991px) {
       top: auto !important;
-      bottom: 50px !important;
+      bottom: 75px !important;
       transform: none;
     }
   }
@@ -2913,7 +2913,7 @@ body {
 
     @media (max-width: 991px) {
       top: auto !important;
-      bottom: 75px !important;
+      bottom: 100px !important;
       transform: none;
     }
 
@@ -2922,7 +2922,7 @@ body {
       display: inline-block;
       width: 25px;
       height: 3px;
-      background-color: #fff;
+      background-color: #fff !important;
       transition: all 300ms ease-in-out;
 
       small {
@@ -2938,7 +2938,7 @@ body {
 
       &.active {
         width: 60px;
-        background-color: var(--mainColor);
+        background-color: var(--mainColor) !important;
 
         small {
           opacity: 1;
