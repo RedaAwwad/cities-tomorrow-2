@@ -1,0 +1,108 @@
+{{#if darkBg}}
+<nav class="navbar navbar__inner navbar-dark navbar-expand-lg text-white"
+style="background-color: var(--mainColor);">
+{{else}}
+<nav class="navbar navbar__inner navbar-dark navbar-expand-lg text-white">
+{{/if}}
+  <div class="container-xl d-flex align-items-center justify-content-between px-4">
+    <div class="d-flex align-items-center gap-3">
+      <a class="d-flex align-items-center gap-3" href="/">
+        <img class="logo" width="450" src="imgs/logo.png" 
+        data-logo-src="imgs/logo.png" 
+        data-colored-logo-src="imgs/logo-colored.png" 
+        alt="زمـــــام القــــوة">
+      </a>
+    </div>
+    <div class="navbar-menu__overlay">
+      <div class="navbar-menu" id="navbarMenu">
+        <ul class="navbar-nav flex-row gap-2">
+          <li class="nav-item navbar-menu__head d-flex align-items-center justify-content-between d-xl-none">
+            <div></div>
+            <button id="closeMenu" class="btn btn-menu d-flex d-xl-none justify-content-center align-items-center text-inherit">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="x-close">
+                <path id="Icon" d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                </svg>
+            </button>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/">
+              الرئيسية
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link scroll-link" href="index.html#about" data-href="#about">
+              من نحن
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link scroll-link" href="index.html#services" data-href="#services">
+              خدماتنا
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link scroll-link" href="index.html#projects" data-href="#projects">
+              مشاريعنا
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link scroll-link" href="index.html#partners" data-href="#partners">
+              شركائنا
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link scroll-link" href="#contact">
+              اتصل بنا
+            </a>
+          </li>
+        </ul>
+        <div class="navbar-menu__footer d-xl-none">
+          <h2>تابعنا عبر </h2>
+          <ul class="list-unstyled m-0 p-0 d-flex align-items-center gap-4">
+            <li>
+              <a href="#" target="_blank" class="footer__link social-linkedin inline-block" title="linkedin">
+                <svg width="1.8rem" height="1.8rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22.2234 0H1.77187C0.792187 0 0 0.773438 0 1.72969V22.2656C0 23.2219 0.792187 24 1.77187 24H22.2234C23.2031 24 24 23.2219 24 22.2703V1.72969C24 0.773438 23.2031 0 22.2234 0ZM7.12031 20.4516H3.55781V8.99531H7.12031V20.4516ZM5.33906 7.43438C4.19531 7.43438 3.27188 6.51094 3.27188 5.37187C3.27188 4.23281 4.19531 3.30937 5.33906 3.30937C6.47813 3.30937 7.40156 4.23281 7.40156 5.37187C7.40156 6.50625 6.47813 7.43438 5.33906 7.43438ZM20.4516 20.4516H16.8937V14.8828C16.8937 13.5562 16.8703 11.8453 15.0422 11.8453C13.1906 11.8453 12.9094 13.2937 12.9094 14.7891V20.4516H9.35625V8.99531H12.7687V10.5609H12.8156C13.2891 9.66094 14.4516 8.70938 16.1813 8.70938C19.7859 8.70938 20.4516 11.0813 20.4516 14.1656V20.4516Z" fill="currentColor"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank" class="footer__link social-linkedin inline-block" title="X">
+                <svg width="1.8rem" height="1.8rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M15.9455 23L10.396 15.0901L3.44886 23H0.509766L9.09209 13.2311L0.509766 1H8.05571L13.286 8.45502L19.8393 1H22.7784L14.5943 10.3165L23.4914 23H15.9455ZM19.2185 20.77H17.2398L4.71811 3.23H6.6971L11.7121 10.2532L12.5793 11.4719L19.2185 20.77Z" fill="currentColor"/>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <ul class="navbar-nav d-flex flex-row gap-4">
+      <li class="nav-item">
+        <button id="openMenu" class="nav-link btn-menu--color d-flex d-xl-none justify-content-center align-items-center">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 12H22" stroke="currentColor" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 6H11" stroke="currentColor" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 18H19" stroke="currentColor" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link btn-menu--color" href="tel:021050269526" title="اتصل بنا">
+          <svg width="1.2rem" height="1.2rem" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#phoneClipPath)">
+            <path d="M26.7716 18.8499L23.7354 16.6812C22.5635 15.8442 20.9739 15.9758 19.9556 16.994L18.1765 18.7731C15.8964 17.1574 10.8436 12.1053 9.22659 9.8234L11.0057 8.04431C12.0241 7.02592 12.1557 5.43632 11.3186 4.26453L9.14992 1.22839C8.09718 -0.245331 5.97066 -0.423394 4.68796 0.859137L1.88665 3.66045C-0.630833 6.17788 -0.628809 9.5848 1.89228 13.0077C5.8906 18.4363 9.56347 22.1091 14.9921 26.1074C18.1583 28.4394 21.6392 28.8134 24.3395 26.1131L27.1408 23.3118C28.4215 22.0311 28.2474 19.904 26.7716 18.8499ZM25.5943 21.7651L22.793 24.5664C20.8503 26.5091 18.4932 25.9695 16.2893 24.3463C11.0529 20.4896 7.51011 16.9469 3.65344 11.7107C2.03081 9.50753 1.49006 7.15022 3.43327 5.20707L6.23469 2.4057C6.56205 2.07834 7.10231 2.12472 7.37011 2.49971L9.53885 5.53585C9.75186 5.83406 9.71834 6.23853 9.45923 6.49764L7.09159 8.86517C6.79332 9.16349 6.69319 9.60668 6.83423 10.0043C7.58843 12.1295 15.8726 20.4122 17.9957 21.1655C18.3933 21.3067 18.8365 21.2065 19.1348 20.9082L21.5023 18.5406C21.7615 18.2816 22.1661 18.2481 22.4642 18.461L25.5004 20.6297C25.8762 20.8981 25.9207 21.4387 25.5943 21.7651Z" fill="currentColor"/>
+            </g>
+            <defs>
+            <clipPath id="phoneClipPath">
+            <rect width="28" height="28" fill="currentColor"/>
+            </clipPath>
+            </defs>
+            </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

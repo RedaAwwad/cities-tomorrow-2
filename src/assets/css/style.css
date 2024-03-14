@@ -1,0 +1,39 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+@font-face {
+    font-family: 'Effra Trial';
+    font-weight: 400;
+    src: url(/fonts/GE_SS_Two_Light.otf);
+  }
+  
+html {
+    font-size: 16px;
+}
+
+/* @media screen and (min-width: 1400px) {
+    html {
+        font-size: 18px;
+    }
+} */
+
+@media screen and (max-width: 580px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #000;
+}
+

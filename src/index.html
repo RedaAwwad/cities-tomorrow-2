@@ -1,0 +1,515 @@
+{{> _head page='qwa' }}
+
+<link rel="stylesheet" href="vendor/jquery.vidbacking.min.css">
+<!-- <link rel="stylesheet" href="vendor/slick/slick.min.css"> -->
+
+</head>
+
+<body class="cities-page">
+  {{> _loader }}
+
+  <header id="video-background" class="zimam-page__header d-flex align-items-center">
+    <div class="container">
+      <div class="zimam-page__content">
+        <video autoplay muted loop playsinline style="pointer-events: none;" class="vidbacking" preload="none">
+          <source src="video/zimam.mp4" type="video/mp4">
+        </video>
+        {{> _inner_navbar logo_lg='imgs/zimam-qwa.png' logo_sm='imgs/zimam-qwa-sm.png' page='qwa' }}
+        
+        
+        <div class="page-hero">
+          <h1 class="reveal">
+            هنا سلايدر 1
+          </h1>
+          <p class="page-subhero reveal">
+            هنا نص تحت السلايدر الأول يمكن الاستفادة منه
+          </p>
+          <!-- <div class="reveal">
+            <a href="#" class="btn cities-btn cities-btn--lg d-flex align-items-center">
+              <span class="text px-2">تواصل معنا</span>
+              <span class="px-2">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect class="icon-bg" width="28" height="28" rx="14" fill="white"/>
+                  <path d="M13.3333 9.41659L8.75 13.9999L13.3333 18.5833" stroke="currentColor" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path opacity="0.6" d="M18.3333 9.41659L13.75 13.9999L18.3333 18.5833" stroke="currentColor" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+              </span>
+            </a>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="overflow-hidden">
+    <!-- about -->
+    <section id="about" class="about-section">
+      <div class="container-xl">
+        <div class="d-none d-md-block">
+          <div class="row about-cards">
+            <div class="col-md-6 d-flex p-0">
+              <div class="card feature-card">
+                <!-- <img class="feature-card__bg" src="imgs/card-bg-1.png" alt=""> -->
+                <div class="feature-card__body">
+                  <div class="feature-card__icon reveal">
+                    <svg width="4rem" height="4rem" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="28" cy="28" r="28" fill="#06171E"/>
+                      <path d="M35.3734 22.36C35.2801 22.3467 35.1867 22.3467 35.0934 22.36C33.0267 22.2934 31.3867 20.6 31.3867 18.52C31.3867 16.4 33.1067 14.6667 35.2401 14.6667C37.3601 14.6667 39.0934 16.3867 39.0934 18.52C39.0801 20.6 37.4401 22.2934 35.3734 22.36Z" fill="white"/>
+                      <path d="M39.7205 31.6C38.2271 32.6 36.1338 32.9733 34.2005 32.72C34.7071 31.6267 34.9738 30.4133 34.9871 29.1333C34.9871 27.8 34.6938 26.5333 34.1338 25.4267C36.1071 25.16 38.2005 25.5333 39.7071 26.5333C41.8138 27.92 41.8138 30.2 39.7205 31.6Z" fill="white"/>
+                      <path d="M20.5865 22.36C20.6799 22.3467 20.7732 22.3467 20.8665 22.36C22.9332 22.2934 24.5732 20.6 24.5732 18.52C24.5732 16.3867 22.8532 14.6667 20.7199 14.6667C18.5999 14.6667 16.8799 16.3867 16.8799 18.52C16.8799 20.6 18.5199 22.2934 20.5865 22.36Z" fill="white"/>
+                      <path d="M20.7335 29.1333C20.7335 30.4267 21.0135 31.6533 21.5202 32.76C19.6402 32.96 17.6802 32.56 16.2402 31.6133C14.1335 30.2133 14.1335 27.9333 16.2402 26.5333C17.6668 25.5733 19.6802 25.1867 21.5735 25.4C21.0268 26.52 20.7335 27.7867 20.7335 29.1333Z" fill="white"/>
+                      <path d="M28.1604 33.16C28.0537 33.1467 27.9337 33.1467 27.8137 33.16C25.3604 33.08 23.4004 31.0667 23.4004 28.5867C23.4137 26.0533 25.4537 24 28.0004 24C30.5337 24 32.5871 26.0533 32.5871 28.5867C32.5737 31.0667 30.6271 33.08 28.1604 33.16Z" fill="white"/>
+                      <path d="M23.8264 35.92C21.8131 37.2667 21.8131 39.48 23.8264 40.8134C26.1197 42.3467 29.8797 42.3467 32.1731 40.8134C34.1864 39.4667 34.1864 37.2534 32.1731 35.92C29.8931 34.3867 26.1331 34.3867 23.8264 35.92Z" fill="white"/>
+                    </svg>
+                  </div>
+                  <h3 class="feature-card__title reveal">من نحن</h3>
+                  <p class="feature-card__text reveal">
+                    مجموعة  متفردة من المستشارين من عدة قطاعات في مجال الهندسة حيث تكللت العديد من النشاطات و المشاريع بالنجاح في مجالات النقل ومصادر المياه و البنية التحتية و البيئة و الاستدامة في المدن الحديثة التي تعتبر أحد مرتكزات رؤية المملكة 2030 لبناء مدن حضرية تمتع بالاستدامة والأمن والأمان البيئي والحضاري. 
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 d-flex p-0">
+              <div class="card feature-card">
+                <!-- <img class="feature-card__bg" src="imgs/card-bg-2.png" alt=""> -->
+                <div class="feature-card__body">
+                  <div class="feature-card__icon reveal">
+                    <svg width="4rem" height="4rem" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="28" cy="28" r="28" fill="#06171E"/>
+                      <path d="M40.3337 24.2C37.2537 19.36 32.747 16.5733 28.0003 16.5733C25.627 16.5733 23.3203 17.2666 21.2137 18.56C19.107 19.8666 17.2137 21.7733 15.667 24.2C14.3337 26.2933 14.3337 29.6933 15.667 31.7866C18.747 36.64 23.2537 39.4133 28.0003 39.4133C30.3737 39.4133 32.6803 38.72 34.787 37.4266C36.8937 36.12 38.787 34.2133 40.3337 31.7866C41.667 29.7066 41.667 26.2933 40.3337 24.2ZM28.0003 33.3866C25.0137 33.3866 22.6137 30.9733 22.6137 28C22.6137 25.0266 25.0137 22.6133 28.0003 22.6133C30.987 22.6133 33.387 25.0266 33.387 28C33.387 30.9733 30.987 33.3866 28.0003 33.3866Z" fill="white"/>
+                      <path d="M28.0002 24.1866C25.9069 24.1866 24.2002 25.8933 24.2002 28C24.2002 30.0933 25.9069 31.8 28.0002 31.8C30.0935 31.8 31.8135 30.0933 31.8135 28C31.8135 25.9066 30.0935 24.1866 28.0002 24.1866Z" fill="white"/>
+                    </svg>
+                  </div>
+                  <h3 class="feature-card__title reveal">رؤيتنا</h3>
+                  <p class="feature-card__text reveal">
+                    لنكون رائدين في تمكين المدن لتصبح مجتمعات ذكية مزدهرة، مستدامة، وشاملة.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 d-flex p-0">
+              <div class="card feature-card">
+                <!-- <img class="feature-card__bg" src="imgs/card-bg-1.png" alt=""> -->
+                <div class="feature-card__body">
+                  <div class="feature-card__icon reveal">
+                    <svg width="4rem" height="4rem" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="28" cy="28" r="28" fill="#06171E"/>
+                      <path d="M41.3337 27H38.6137C38.1337 21.92 34.0803 17.8533 29.0003 17.3867V14.6667C29.0003 14.12 28.547 13.6667 28.0003 13.6667C27.4537 13.6667 27.0003 14.12 27.0003 14.6667V17.3867C21.9203 17.8667 17.8537 21.92 17.387 27H14.667C14.1203 27 13.667 27.4533 13.667 28C13.667 28.5467 14.1203 29 14.667 29H17.387C17.867 34.08 21.9203 38.1467 27.0003 38.6133V41.3333C27.0003 41.88 27.4537 42.3333 28.0003 42.3333C28.547 42.3333 29.0003 41.88 29.0003 41.3333V38.6133C34.0803 38.1333 38.147 34.08 38.6137 29H41.3337C41.8803 29 42.3337 28.5467 42.3337 28C42.3337 27.4533 41.8803 27 41.3337 27ZM28.0003 32.16C25.707 32.16 23.8403 30.2933 23.8403 28C23.8403 25.7067 25.707 23.84 28.0003 23.84C30.2937 23.84 32.1603 25.7067 32.1603 28C32.1603 30.2933 30.2937 32.16 28.0003 32.16Z" fill="white"/>
+                    </svg>
+                  </div>
+                  <h3 class="feature-card__title reveal">أهدافنا</h3>
+                  <p class="feature-card__text reveal">
+                    الابداع في إنشاء مدن ترتقي بالتطلعات وتتمحورحول مدن ذكية نابضة بالحياة والبيئة الحضارية المتكاملة والعصرية للأفراد والمجتمعات. 
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 d-flex p-0">
+              <div class="card feature-card">
+                <!-- <img class="feature-card__bg" src="imgs/card-bg-1.png" alt=""> -->
+                <div class="feature-card__body">
+                  <div class="feature-card__icon reveal">
+                    <svg width="4rem" height="4rem" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="28" cy="28" r="28" fill="#06171E"/>
+                      <path d="M39.9597 13.3333H36.0397C34.3463 13.3333 33.333 14.3467 33.333 16.04V19.96C33.333 21.6533 34.3463 22.6667 36.0397 22.6667H39.9597C41.653 22.6667 42.6663 21.6533 42.6663 19.96V16.04C42.6663 14.3467 41.653 13.3333 39.9597 13.3333ZM40.813 18.24C40.3197 19.8133 38.5997 20.6667 37.9997 20.6667C37.3997 20.6667 35.693 19.84 35.1863 18.24C35.1063 18 35.0663 17.7333 35.0663 17.48C35.0663 16.6133 35.5063 15.72 36.4263 15.4267C36.973 15.2533 37.5597 15.3467 37.973 15.6933C38.3997 15.36 38.9863 15.2533 39.5463 15.4267C40.773 15.8133 41.1597 17.1867 40.813 18.24Z" fill="white"/>
+                      <path d="M36.0403 24.6667C33.4403 24.6667 31.3337 22.56 31.3337 19.96V16C31.3337 15.2667 30.7337 14.6667 30.0003 14.6667H21.3337C17.6537 14.6667 14.667 17.64 14.667 21.3067V30.6C14.667 34.28 17.6537 37.2667 21.3337 37.2667H23.3337C23.707 37.2667 24.187 37.5067 24.4003 37.8L26.4003 40.4533C27.2803 41.6267 28.7203 41.6267 29.6003 40.4533L31.6003 37.8C31.8537 37.4667 32.2537 37.2667 32.667 37.2667H34.6803C38.3603 37.2667 41.3337 34.2933 41.3337 30.6133V26C41.3337 25.2667 40.7337 24.6667 40.0003 24.6667H36.0403ZM22.667 28C21.9203 28 21.3337 27.4 21.3337 26.6667C21.3337 25.9333 21.9203 25.3333 22.667 25.3333C23.4003 25.3333 24.0003 25.9333 24.0003 26.6667C24.0003 27.4 23.4137 28 22.667 28ZM28.0003 28C27.2537 28 26.667 27.4 26.667 26.6667C26.667 25.9333 27.2537 25.3333 28.0003 25.3333C28.7337 25.3333 29.3337 25.9333 29.3337 26.6667C29.3337 27.4 28.747 28 28.0003 28Z" fill="white"/>
+                    </svg>
+                  </div>
+                  <h3 class="feature-card__title reveal">رسالتنا</h3>
+                  <p class="feature-card__text reveal">
+                    نتشارك مع المدن لخلق وتنفيذ حلول مبتكرة ومرتكزة على مدن الذكية تحسن من حياة السكان، الأعمال، والبيئة.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div dir="rtl" class="swiper about-slider d-md-none">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card feature-card">
+                <!-- <img class="feature-card__bg" src="imgs/card-bg-1.png" alt=""> -->
+                <div class="feature-card__body">
+                  <div class="feature-card__icon reveal">
+                    <svg width="4rem" height="4rem" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="28" cy="28" r="28" fill="#06171E"/>
+                      <path d="M35.3734 22.36C35.2801 22.3467 35.1867 22.3467 35.0934 22.36C33.0267 22.2934 31.3867 20.6 31.3867 18.52C31.3867 16.4 33.1067 14.6667 35.2401 14.6667C37.3601 14.6667 39.0934 16.3867 39.0934 18.52C39.0801 20.6 37.4401 22.2934 35.3734 22.36Z" fill="white"/>
+                      <path d="M39.7205 31.6C38.2271 32.6 36.1338 32.9733 34.2005 32.72C34.7071 31.6267 34.9738 30.4133 34.9871 29.1333C34.9871 27.8 34.6938 26.5333 34.1338 25.4267C36.1071 25.16 38.2005 25.5333 39.7071 26.5333C41.8138 27.92 41.8138 30.2 39.7205 31.6Z" fill="white"/>
+                      <path d="M20.5865 22.36C20.6799 22.3467 20.7732 22.3467 20.8665 22.36C22.9332 22.2934 24.5732 20.6 24.5732 18.52C24.5732 16.3867 22.8532 14.6667 20.7199 14.6667C18.5999 14.6667 16.8799 16.3867 16.8799 18.52C16.8799 20.6 18.5199 22.2934 20.5865 22.36Z" fill="white"/>
+                      <path d="M20.7335 29.1333C20.7335 30.4267 21.0135 31.6533 21.5202 32.76C19.6402 32.96 17.6802 32.56 16.2402 31.6133C14.1335 30.2133 14.1335 27.9333 16.2402 26.5333C17.6668 25.5733 19.6802 25.1867 21.5735 25.4C21.0268 26.52 20.7335 27.7867 20.7335 29.1333Z" fill="white"/>
+                      <path d="M28.1604 33.16C28.0537 33.1467 27.9337 33.1467 27.8137 33.16C25.3604 33.08 23.4004 31.0667 23.4004 28.5867C23.4137 26.0533 25.4537 24 28.0004 24C30.5337 24 32.5871 26.0533 32.5871 28.5867C32.5737 31.0667 30.6271 33.08 28.1604 33.16Z" fill="white"/>
+                      <path d="M23.8264 35.92C21.8131 37.2667 21.8131 39.48 23.8264 40.8134C26.1197 42.3467 29.8797 42.3467 32.1731 40.8134C34.1864 39.4667 34.1864 37.2534 32.1731 35.92C29.8931 34.3867 26.1331 34.3867 23.8264 35.92Z" fill="white"/>
+                    </svg>
+                  </div>
+                  <h3 class="feature-card__title reveal">من نحن</h3>
+                  <p class="feature-card__text reveal">
+                    مجموعة  متفردة من المستشارين من عدة قطاعات في مجال الهندسة حيث تكللت العديد من النشاطات و المشاريع بالنجاح في مجالات النقل ومصادر المياه و البنية التحتية و البيئة و الاستدامة في المدن الحديثة التي تعتبر أحد مرتكزات رؤية المملكة 2030 لبناء مدن حضرية تمتع بالاستدامة والأمن والأمان البيئي والحضاري. 
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card feature-card">
+                <!-- <img class="feature-card__bg" src="imgs/card-bg-2.png" alt=""> -->
+                <div class="feature-card__body">
+                  <div class="feature-card__icon reveal">
+                    <svg width="4rem" height="4rem" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="28" cy="28" r="28" fill="#06171E"/>
+                      <path d="M40.3337 24.2C37.2537 19.36 32.747 16.5733 28.0003 16.5733C25.627 16.5733 23.3203 17.2666 21.2137 18.56C19.107 19.8666 17.2137 21.7733 15.667 24.2C14.3337 26.2933 14.3337 29.6933 15.667 31.7866C18.747 36.64 23.2537 39.4133 28.0003 39.4133C30.3737 39.4133 32.6803 38.72 34.787 37.4266C36.8937 36.12 38.787 34.2133 40.3337 31.7866C41.667 29.7066 41.667 26.2933 40.3337 24.2ZM28.0003 33.3866C25.0137 33.3866 22.6137 30.9733 22.6137 28C22.6137 25.0266 25.0137 22.6133 28.0003 22.6133C30.987 22.6133 33.387 25.0266 33.387 28C33.387 30.9733 30.987 33.3866 28.0003 33.3866Z" fill="white"/>
+                      <path d="M28.0002 24.1866C25.9069 24.1866 24.2002 25.8933 24.2002 28C24.2002 30.0933 25.9069 31.8 28.0002 31.8C30.0935 31.8 31.8135 30.0933 31.8135 28C31.8135 25.9066 30.0935 24.1866 28.0002 24.1866Z" fill="white"/>
+                    </svg>
+                  </div>
+                  <h3 class="feature-card__title reveal">رؤيتنا</h3>
+                  <p class="feature-card__text reveal">
+                    لنكون رائدين في تمكين المدن لتصبح مجتمعات ذكية مزدهرة، مستدامة، وشاملة.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card feature-card">
+                <!-- <img class="feature-card__bg" src="imgs/card-bg-1.png" alt=""> -->
+                <div class="feature-card__body">
+                  <div class="feature-card__icon reveal">
+                    <svg width="4rem" height="4rem" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="28" cy="28" r="28" fill="#06171E"/>
+                      <path d="M41.3337 27H38.6137C38.1337 21.92 34.0803 17.8533 29.0003 17.3867V14.6667C29.0003 14.12 28.547 13.6667 28.0003 13.6667C27.4537 13.6667 27.0003 14.12 27.0003 14.6667V17.3867C21.9203 17.8667 17.8537 21.92 17.387 27H14.667C14.1203 27 13.667 27.4533 13.667 28C13.667 28.5467 14.1203 29 14.667 29H17.387C17.867 34.08 21.9203 38.1467 27.0003 38.6133V41.3333C27.0003 41.88 27.4537 42.3333 28.0003 42.3333C28.547 42.3333 29.0003 41.88 29.0003 41.3333V38.6133C34.0803 38.1333 38.147 34.08 38.6137 29H41.3337C41.8803 29 42.3337 28.5467 42.3337 28C42.3337 27.4533 41.8803 27 41.3337 27ZM28.0003 32.16C25.707 32.16 23.8403 30.2933 23.8403 28C23.8403 25.7067 25.707 23.84 28.0003 23.84C30.2937 23.84 32.1603 25.7067 32.1603 28C32.1603 30.2933 30.2937 32.16 28.0003 32.16Z" fill="white"/>
+                    </svg>
+                  </div>
+                  <h3 class="feature-card__title reveal">أهدافنا</h3>
+                  <p class="feature-card__text reveal">
+                    الابداع في إنشاء مدن ترتقي بالتطلعات وتتمحورحول مدن ذكية نابضة بالحياة والبيئة الحضارية المتكاملة والعصرية للأفراد والمجتمعات. 
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card feature-card">
+                <!-- <img class="feature-card__bg" src="imgs/card-bg-1.png" alt=""> -->
+                <div class="feature-card__body">
+                  <div class="feature-card__icon reveal">
+                    <svg width="4rem" height="4rem" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="28" cy="28" r="28" fill="#06171E"/>
+                      <path d="M39.9597 13.3333H36.0397C34.3463 13.3333 33.333 14.3467 33.333 16.04V19.96C33.333 21.6533 34.3463 22.6667 36.0397 22.6667H39.9597C41.653 22.6667 42.6663 21.6533 42.6663 19.96V16.04C42.6663 14.3467 41.653 13.3333 39.9597 13.3333ZM40.813 18.24C40.3197 19.8133 38.5997 20.6667 37.9997 20.6667C37.3997 20.6667 35.693 19.84 35.1863 18.24C35.1063 18 35.0663 17.7333 35.0663 17.48C35.0663 16.6133 35.5063 15.72 36.4263 15.4267C36.973 15.2533 37.5597 15.3467 37.973 15.6933C38.3997 15.36 38.9863 15.2533 39.5463 15.4267C40.773 15.8133 41.1597 17.1867 40.813 18.24Z" fill="white"/>
+                      <path d="M36.0403 24.6667C33.4403 24.6667 31.3337 22.56 31.3337 19.96V16C31.3337 15.2667 30.7337 14.6667 30.0003 14.6667H21.3337C17.6537 14.6667 14.667 17.64 14.667 21.3067V30.6C14.667 34.28 17.6537 37.2667 21.3337 37.2667H23.3337C23.707 37.2667 24.187 37.5067 24.4003 37.8L26.4003 40.4533C27.2803 41.6267 28.7203 41.6267 29.6003 40.4533L31.6003 37.8C31.8537 37.4667 32.2537 37.2667 32.667 37.2667H34.6803C38.3603 37.2667 41.3337 34.2933 41.3337 30.6133V26C41.3337 25.2667 40.7337 24.6667 40.0003 24.6667H36.0403ZM22.667 28C21.9203 28 21.3337 27.4 21.3337 26.6667C21.3337 25.9333 21.9203 25.3333 22.667 25.3333C23.4003 25.3333 24.0003 25.9333 24.0003 26.6667C24.0003 27.4 23.4137 28 22.667 28ZM28.0003 28C27.2537 28 26.667 27.4 26.667 26.6667C26.667 25.9333 27.2537 25.3333 28.0003 25.3333C28.7337 25.3333 29.3337 25.9333 29.3337 26.6667C29.3337 27.4 28.747 28 28.0003 28Z" fill="white"/>
+                    </svg>
+                  </div>
+                  <h3 class="feature-card__title reveal">رسالتنا</h3>
+                  <p class="feature-card__text reveal">
+                    نتشارك مع المدن لخلق وتنفيذ حلول مبتكرة ومرتكزة على مدن الذكية تحسن من حياة السكان، الأعمال، والبيئة.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about-slider__pagination reveal"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- services -->
+    <section id="services" class="our-services section-space">
+      <div class="container-xl">
+        <div class="d-flex flex-column flex-sm-row align-items-sm-center gap-sm-5 mb-5">
+          <h2 class="heading__title reveal">خدماتنا</h2>
+          <p class="heading__subtitle mb-0 font-bold reveal" style="max-width: 450px;">
+            حلول متكاملة للبنية التحتية والتكنولوجيا لتحسين الحياة الحضرية
+          </p>
+        </div>
+        <div dir="rtl" class="swiper services-slider reveal">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="service.html" class="service-card">
+                <img class="service-card__img-bg" src="imgs/service/service-1.png" loading="lazy" alt="">
+                <div class="service-card__content">
+                  <h3 class="service-card__title">تحليل الحركة المرورية</h3>
+                  <div class="service-card__footer">
+                    <p class="service-card__text">نص افتراضي نص افتراضي نص افتراضي نص افتراضي</p>
+                    <span class="btn cities-btn cities-btn--rounded d-flex align-items-center">
+                      <span class="text px-2">رؤية المزيد</span>
+                      <span class="px-2">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect class="icon-bg" width="28" height="28" rx="14" fill="white"/>
+                          <path d="M13.3333 9.41659L8.75 13.9999L13.3333 18.5833" stroke="currentColor" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path opacity="0.6" d="M18.3333 9.41659L13.75 13.9999L18.3333 18.5833" stroke="currentColor" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="service.html" class="service-card">
+                <img class="service-card__img-bg" src="imgs/service/service-2.png" loading="lazy" alt="">
+                <div class="service-card__content">
+                  <h3 class="service-card__title">حلول النقل العام</h3>
+                  <div class="service-card__footer">
+                    <p class="service-card__text">نص افتراضي نص افتراضي نص افتراضي نص افتراضي</p>
+                    <span class="btn cities-btn cities-btn--rounded d-flex align-items-center">
+                      <span class="text px-2">رؤية المزيد</span>
+                      <span class="px-2">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect class="icon-bg" width="28" height="28" rx="14" fill="white"/>
+                          <path d="M13.3333 9.41659L8.75 13.9999L13.3333 18.5833" stroke="currentColor" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path opacity="0.6" d="M18.3333 9.41659L13.75 13.9999L18.3333 18.5833" stroke="currentColor" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="service.html" class="service-card">
+                <img class="service-card__img-bg" src="imgs/service/service-3.png" loading="lazy" alt="">
+                <div class="service-card__content">
+                  <h3 class="service-card__title">التخطيط للنقل</h3>
+                  <div class="service-card__footer">
+                    <p class="service-card__text">نص افتراضي نص افتراضي نص افتراضي نص افتراضي</p>
+                    <span class="btn cities-btn cities-btn--rounded d-flex align-items-center">
+                      <span class="text px-2">رؤية المزيد</span>
+                      <span class="px-2">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect class="icon-bg" width="28" height="28" rx="14" fill="white"/>
+                          <path d="M13.3333 9.41659L8.75 13.9999L13.3333 18.5833" stroke="currentColor" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path opacity="0.6" d="M18.3333 9.41659L13.75 13.9999L18.3333 18.5833" stroke="currentColor" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="service.html" class="service-card">
+                <img class="service-card__img-bg" src="imgs/service/service-1.png" loading="lazy" alt="">
+                <div class="service-card__content">
+                  <h3 class="service-card__title"> النفايات الصلبة
+                    والمياه</h3>
+                  <div class="service-card__footer">
+                    <p class="service-card__text">نص افتراضي نص افتراضي نص افتراضي نص افتراضي</p>
+                    <span class="btn cities-btn cities-btn--rounded d-flex align-items-center">
+                      <span class="text px-2">رؤية المزيد</span>
+                      <span class="px-2">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect class="icon-bg" width="28" height="28" rx="14" fill="white"/>
+                          <path d="M13.3333 9.41659L8.75 13.9999L13.3333 18.5833" stroke="currentColor" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path opacity="0.6" d="M18.3333 9.41659L13.75 13.9999L18.3333 18.5833" stroke="currentColor" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="service.html" class="service-card">
+                <img class="service-card__img-bg" src="imgs/service/service-2.png" loading="lazy" alt="">
+                <div class="service-card__content">
+                  <h3 class="service-card__title">الابتكار البيئي والتقني</h3>
+                  <div class="service-card__footer">
+                    <p class="service-card__text">
+                      نص افتراضي نص افتراضي نص افتراضي نص افتراضي
+                    </p>
+                    <span class="btn cities-btn cities-btn--rounded d-flex align-items-center">
+                      <span class="text px-2">رؤية المزيد</span>
+                      <span class="px-2">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect class="icon-bg" width="28" height="28" rx="14" fill="white"/>
+                          <path d="M13.3333 9.41659L8.75 13.9999L13.3333 18.5833" stroke="currentColor" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path opacity="0.6" d="M18.3333 9.41659L13.75 13.9999L18.3333 18.5833" stroke="currentColor" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- <div class="services-slider__controls">
+            <button class="services-slider__next btn">
+              <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#nextIcon)"><g><path d="M32.7819 15.971L25.2821 8.47115C25.0127 8.15656 24.5392 8.11989 24.2246 8.38936C23.91 8.65877 23.8733 9.13224 24.1428 9.44683C24.1679 9.47615 24.1953 9.50354 24.2246 9.52862L30.442 15.7535H0.749963C0.335795 15.7535 0 16.0893 0 16.5035C0 16.9178 0.335795 17.2535 0.749963 17.2535H30.442L24.2246 23.4709C23.91 23.7403 23.8733 24.2137 24.1428 24.5283C24.4123 24.8429 24.8857 24.8796 25.2003 24.6101C25.2296 24.585 25.257 24.5577 25.2821 24.5283L32.782 17.0284C33.0727 16.736 33.0727 16.2636 32.7819 15.971Z" fill="currentColor"/></g></g><defs><clipPath id="nextIcon"><rect width="33" height="33" fill="white"/>
+              </clipPath></defs>
+              </svg>
+            </button>
+            <div class="services-slider__pagination"></div>
+            <button class="services-slider__prev btn">
+              <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#prevIcon)"><g><path d="M0.218113 17.029L7.71794 24.5288C7.98735 24.8434 8.46081 24.8801 8.7754 24.6106C9.08999 24.3412 9.12667 23.8678 8.85719 23.5532C8.83206 23.5238 8.80473 23.4965 8.7754 23.4714L2.55804 17.2465L32.25 17.2465C32.6642 17.2465 33 16.9107 33 16.4965C33 16.0822 32.6642 15.7465 32.25 15.7465L2.55804 15.7465L8.7754 9.52913C9.08999 9.25972 9.12667 8.78626 8.85719 8.47167C8.58772 8.15708 8.11432 8.1204 7.79973 8.38988C7.7704 8.41501 7.74301 8.44234 7.71794 8.47167L0.218048 15.9716C-0.0726967 16.264 -0.0726929 16.7364 0.218113 17.029Z" fill="currentColor"/></g></g><defs><clipPath id="prevIcon"><rect width="33" height="33" fill="white" transform="matrix(-1 0 0 -1 33 33)"/>
+              </clipPath></defs>
+              </svg>
+            </button>
+          </div> -->
+
+
+          <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- projects -->
+    <section id="projects" class="our-projects section-space">
+      <div class="container-xl">
+        <div class="d-flex flex-column flex-sm-row align-items-sm-center gap-sm-5 mb-5">
+          <h2 class="heading__title reveal">مشاريعنا</h2>
+          <p class="heading__subtitle mb-0 font-bold reveal" style="max-width: 450px;">
+            إضافة إلى زيادة عدد الحروف التى يولدها التطبيق. إذا كنت تحتاج إلى عدد أكبر من الفقرات 
+          </p>
+        </div>
+        <div class="projects__cards">
+          <div class="projects-card">
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- clients -->
+    <section id="clients" class="section-space">
+      <div class="container-xl">
+        <div class="d-flex flex-column flex-sm-row align-items-sm-center gap-sm-5 mb-5">
+          <h2 class="heading__title reveal">عملائنا</h2>
+          <p class="heading__subtitle reveal mb-0" style="max-width: 450px;">
+            إضافة إلى زيادة عدد الحروف التى يولدها التطبيق. إذا كنت تحتاج إلى عدد أكبر من الفقرات 
+          </p>
+        </div>
+
+        <div dir="rtl" class="swiper partners-slider reveal">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="imgs/clients/client-2.png" alt="partner logo">
+            </div>
+            <div class="swiper-slide">
+              <img src="imgs/clients/client-1.png" alt="partner logo">
+            </div>
+            <div class="swiper-slide">
+              <img src="imgs/clients/client-3.png" alt="partner logo">
+            </div>
+            <div class="swiper-slide">
+              <img src="imgs/clients/client-4.png" alt="partner logo">
+            </div>
+            <div class="swiper-slide">
+              <img src="imgs/clients/client-5.png" alt="partner logo">
+            </div>
+            <div class="swiper-slide">
+              <img src="imgs/clients/client-6.png" alt="partner logo">
+            </div>
+            <div class="swiper-slide">
+              <img src="imgs/clients/client-7.png" alt="partner logo">
+            </div>
+            <div class="swiper-slide">
+              <img src="imgs/clients/client-8.png" alt="partner logo">
+            </div>
+            <div class="swiper-slide">
+              <img src="imgs/clients/client-1.png" alt="partner logo">
+            </div>
+            <div class="swiper-slide">
+              <img src="imgs/clients/client-2.png" alt="partner logo">
+            </div>
+            <div class="swiper-slide">
+              <img src="imgs/clients/client-3.png" alt="partner logo">
+            </div>
+            <div class="swiper-slide">
+              <img src="imgs/clients/client-4.png" alt="partner logo">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- partners -->
+    <section id="partners" class="partners__section">
+      <div class="container-xl">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0 d-none d-lg-block reveal">
+            <img class="partners__img" src="imgs/partners-img.webp" alt="شركائنا">
+          </div>
+          <div class="col-lg-6">
+            <div class="mb-4">
+              <h2 class="heading__title mb-4 reveal">شركائنا</h2>
+              <p class="heading__subtitle reveal mb-0">
+                تعزيز الشراكات الإستراتيجية من أجل مدن أكثر ذكاءً واستدامة
+              </p>
+            </div>
+            <div class="mb-4 d-lg-none reveal">
+              <img class="partners__img" src="imgs/partners-img.webp" alt="شركائنا">
+            </div>
+            <p class="partners__text mb-4 pb-2 reveal">في مدن الغد ، نؤمن بقوة الشراكات والتحالفات لدفع نجاحنا وتوسيع نطاق تأثيرنا. ومن خلال التعاون مع الشركاء الاستراتيجيين في مجال التكنولوجيا والبنية التحتية والاستدامة، نقدم حلولاً مبتكرة تتجاوز التوقعات وتساهم في تحقيق أهداف التنمية المستدامة. انضم إلينا في خلق مستقبل أكثر ذكاءً واستدامة. اتصل بنا لاستكشاف فرص التعاون.</p>
+            <div class="reveal">
+              <a href="#contact" class="btn cities-btn cities-btn--lg scroll-link d-flex align-items-center">
+                <span class="text px-2">إتصل بنا</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contact us -->
+    <section id="contact" class="contact section-space">
+      <div class="container-xl">
+        <div class="row">
+          <div class="col-md-8 mx-auto reveal">
+            <div class="mb-5">
+              <h2 class="heading__title">اتصل بنا</h2>
+              <p class="heading__subtitle reveal">
+                تواصل معنا وشاركنا رأيك لتحسين تجربتك، يسعدنا التواصل معك لمناقشة أفكارك.
+              </p>
+            </div>
+            <form action="POST" class="reveal">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="mb-3">
+                    <label class="mb-2" for="name">الاسم الأول</label>
+                    <input type="text" class="form-control" placeholder="الاسم الأول">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="mb-3">
+                    <label class="mb-2" for="name">الاسم الأخير</label>
+                    <input type="text" class="form-control" placeholder="الاسم الأخير">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="mb-3">
+                    <label class="mb-2" for="phone">رقم الهاتف</label>
+                    <input type="text" id="phone" class="form-control" placeholder="رقم الهاتف">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="mb-3">
+                    <label class="mb-2" for="email">البريد الإلكتروني</label>
+                    <input type="text" id="email" class="form-control" placeholder="عنوان البريد الإلكتروني">
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="mb-3">
+                    <label class="mb-2" for="message">الرسالة</label>
+                    <textarea name="" id="message" rows="8" class="form-control" placeholder="الرسالة"></textarea>
+                  </div>
+                </div>
+              </div>
+             
+              <button type="submit" class="btn cities-btn cities-btn--lg d-flex align-items-center">
+                <span class="text px-2"> ارسال</span>
+              </button>
+            </form>
+          </div>
+          <div class="col-md-4 d-none d-md-flex reveal">
+            <img class="contact__img" src="imgs/contact-img.webp" alt="contact image">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  {{> _footer }}
+  {{> _tail }}
+  <script src="vendor/jquery.vidbacking.min.js"></script>
+  <script>
+    $(function () {
+      $('#video-background').vidbacking();
+
+    });
+  </script>
+  </body>
+</html>
