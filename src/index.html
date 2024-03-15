@@ -1,4 +1,8 @@
-{{> _head page='qwa' }}
+{{> _head }}
+
+<link rel="preload" href="video/video-1.mov" type="media">
+<link rel="preload" href="video/video-2.mov" type="media">
+<link rel="preload" href="video/video-3.mp4" type="media">
 
 <link rel="stylesheet" href="vendor/jquery.vidbacking.min.css">
 <link rel="stylesheet" href="vendor/slick/slick.min.css">
@@ -7,7 +11,7 @@
 </head>
 
 <body class="cities-page">
-  {{> _loader }}
+  <!-- {{> _loader }} -->
 
   <header class="cities__header position-relative overflow-hidden">
     {{> _inner_navbar }}
@@ -17,7 +21,7 @@
         <div class="swiper-slide">
           <div class="slide-container video-background">
             <video autoplay muted loop playsinline style="pointer-events: none;" class="vidbacking" preload="none">
-              <source src="video/v1.mp4" type="video/mp4">
+              <source src="video/video-1.mov" type="video/mp4">
             </video>
             <div class="page-hero reveal">
               <h2 class="slide__main-title">
@@ -32,7 +36,7 @@
         <div class="swiper-slide">
           <div class="slide-container video-background">
             <video autoplay muted loop playsinline style="pointer-events: none;" class="vidbacking" preload="none">
-              <source src="video/v2.mp4" type="video/mp4">
+              <source src="video/video-2.mov" type="video/mp4">
             </video>
             <div class="page-hero reveal">
               <h2 class="slide__main-title">
@@ -47,7 +51,7 @@
         <div class="swiper-slide">
           <div class="slide-container video-background">
             <video autoplay muted loop playsinline style="pointer-events: none;" class="vidbacking" preload="none">
-              <source src="video/v3.mp4" type="video/mp4">
+              <source src="video/video-3.mp4" type="video/mp4">
             </video>
             <div class="page-hero reveal">
               <h2 class="slide__main-title">
