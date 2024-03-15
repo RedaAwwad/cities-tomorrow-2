@@ -13,6 +13,7 @@
 <body class="cities-page">
   <!-- {{> _loader }} -->
 
+  <!-- main header -->
   <header class="cities__header position-relative overflow-hidden">
     {{> _inner_navbar }}
     <!-- ----------------------------- -->
@@ -79,6 +80,7 @@
     <div id="heroSliderPagination" class="hero-slider__pagination"></div>
     <!-- ----------------------------- -->
   </header>
+
   <main class="overflow-hidden">
     <!-- about -->
     <section id="about" class="about-section">
@@ -481,6 +483,7 @@
         </div>
       </div>
     </section>
+    
     <!-- contact us -->
     <section id="contact" class="contact section-space">
       <div class="container-xl">
@@ -491,6 +494,9 @@
               <p class="heading__subtitle reveal">
                 تواصل معنا وشاركنا رأيك لتحسين تجربتك، يسعدنا التواصل معك لمناقشة أفكارك.
               </p>
+            </div>
+            <div class="d-flex d-md-none mb-5">
+              <img class="w-100" style="max-width: 100%;max-height: 425px;object-fit: cover; object-position: top;border-radius: 25px;" src="imgs/contact-img.webp" alt="اتصل بنا">
             </div>
             <form action="POST" class="reveal">
               <div class="row">
@@ -532,7 +538,7 @@
             </form>
           </div>
           <div class="col-md-4 d-none d-md-flex reveal">
-            <img class="contact__img" src="imgs/contact-img.webp" alt="contact image">
+            <img class="contact__img" src="imgs/contact-img.webp" alt="اتصل بنا">
           </div>
         </div>
       </div>

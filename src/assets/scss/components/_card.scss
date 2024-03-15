@@ -18,6 +18,11 @@
         padding: 3rem 2rem 1rem 2rem;  
     }
 
+    @media (max-width: 480px) {
+        padding: 3rem 0.75rem;
+        text-align: justify;
+    }
+
     &__bg {
         position: absolute;
         top: 50%;
