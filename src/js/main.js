@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '@/assets/css/style.css';
 import '@/assets/scss/main.scss';
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Mousewheel } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -23,19 +23,9 @@ $(function () {
         }
     }, 1000);
 
-    // init bootstrap modals
-    // Array.from(document.querySelectorAll('.custom-modal')).forEach(modalNode => {
-    //     new Modal(modalNode)
-    // })
-
     if($('#particles-js').length) {
         particlesJS.load('particles-js', 'vendor/particles/particles.json');
     }
-
-    // if($('#particles-loader').length) {
-    //     particlesJS.load('particles-loader', 'vendor/particles/particles.json');
-    // }
-    
 
     // navbar menu navigation
     $('#openMenu').on('click', function () {
@@ -88,6 +78,9 @@ $(function () {
 
     makeNavbarFixed();
 
+    /**
+     * Sliders
+     */
     if($('.hero-slider').length) {
         const heroSlider = new Swiper(".hero-slider", {
             modules: [Navigation],
@@ -139,6 +132,20 @@ $(function () {
         });
     }
 
+    if($('.projects-slider').length) {
+        const projectsSwiper = new Swiper(".projects-slider", {
+            modules: [Pagination, Mousewheel],
+            direction: "vertical",
+            slidesPerView: 1,
+            spaceBetween: 30,
+            mousewheel: true,
+            pagination: {
+                el: ".projects-slider .swiper-pagination",
+                clickable: true,
+            },
+        });
+    }
+
     if($('.partners-slider').length) {
         new Swiper('.partners-slider', {
             speed: 400,
@@ -162,6 +169,12 @@ $(function () {
     }
 
     if($('.services-slider').length) {
+        let initialSlide = 2
+
+        if(window.innerWidth < 500) {
+            initialSlide = 0
+        }
+
         $('.services-slider').slick({
             rtl: true,
             dots: true,
@@ -169,6 +182,7 @@ $(function () {
             speed: 300,
             slidesToShow: 4,
             slidesToScroll: 1,
+            initialSlide,
             responsive: [
                 {
                     breakpoint: 1600,
@@ -204,35 +218,6 @@ $(function () {
               // settings: "unslick"
               // instead of a settings object
             ]
-        });
-    }
-
-    if($('.projects-slider').length) {
-        new Swiper(".projects-slider", {
-            modules: [Pagination],
-            slidesPerView: 2,
-            // centeredSlides: true,
-            spaceBetween: 10,
-            // loop: true,
-            pagination: {
-                el: ".projects-slider__pagination",
-                clickable: true,
-            },
-            breakpoints: {
-                '@0.75': {
-                  slidesPerView: 3,
-                  spaceBetween: 0,
-                },
-                '@1.00': {
-                  slidesPerView: 4,
-                },
-                '@1.25': {
-                    slidesPerView: 5,
-                  },
-                '@1.50': {
-                  slidesPerView: 6,
-                },
-            }
         });
     }
 
