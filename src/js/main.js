@@ -177,6 +177,7 @@ $(function () {
 
         $('.services-slider').slick({
             rtl: true,
+            lazyLoad: 'ondemand',
             dots: true,
             infinite: true,
             speed: 300,
